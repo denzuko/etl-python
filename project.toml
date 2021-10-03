@@ -1,0 +1,13 @@
+[project]
+id = 'com.dwightaspencer.etl'
+
+[[project.licences]]
+type = 'BSD-2-Clause'
+
+[build]
+[[build.buildpacks]]
+uri = "heroku/python"
+
+[metadata]
+build_with = 'pack build denzuko/etl --builder heroku/buildpacks --default-process worker'
+release_with = 'docker login -u ... && docker push denzuko/etl'
