@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -c
+    kompose.version: 1.24.0 (4a2a0458)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: etl
+  name: etl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: etl
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -c
+        kompose.version: 1.24.0 (4a2a0458)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: etl
+    spec:
+      containers:
+        - command:
+            - /cnb/process/web
+          image: denzuko/etl:latest
+          name: etl
+          resources: {}
+          stdin: true
+          tty: true
+          workingDir: /workspace
+      restartPolicy: Always
+status: {}

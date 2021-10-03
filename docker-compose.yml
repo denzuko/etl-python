@@ -1,0 +1,12 @@
+version: "3"
+services:
+  etl:
+    entrypoint:
+      - /cnb/process/web
+    image: denzuko/etl:latest
+    ipc: private
+    stdin_open: true
+    tty: true
+    user: heroku
+    working_dir: /workspace
+networks: {}
