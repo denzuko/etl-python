@@ -7,7 +7,7 @@ Batch data processing (template) with pyinvoke and heroku
 key|value schema|description
 -|-|-
 PORT|<int:80>|TCP Port to listen on
-ENV|<str:"Production"|"Development">|Flask environment
+ENV|<str:"Production"\|"Development">|Flask environment
 
 ## Installation
 
