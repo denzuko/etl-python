@@ -1,1 +1,1 @@
-web: invoke
+worker: invoke

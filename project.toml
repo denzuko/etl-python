@@ -9,5 +9,5 @@ type = 'BSD-2-Clause'
 uri = "heroku/python"
 
 [metadata]
-build_with = 'pack build denzuko/etl --builder heroku/buildpacks --default-process worker'
+build_with = 'pack build denzuko/etl --builder heroku/buildpacks:20 --default-process worker'
 release_with = 'docker login -u ... && docker push denzuko/etl'
